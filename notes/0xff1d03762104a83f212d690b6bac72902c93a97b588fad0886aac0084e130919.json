@@ -1,0 +1,24 @@
+{
+	"pk1": "0x26d264c0f94c7089a9be0782aba859f2977447f023085af54e02f0e1039fe3ce",
+	"pk2": "0x7bcc180572b26488368240bb84114cf42eed9e708a03f6f431555fd8e135092",
+	"amount": "0xf4240",
+	"tochainid": 79,
+	"fromassethash": "0x727B715a3EaCb71A89C9321861a55eadc6f29A49",
+	"encrypotednote": "0012345",
+	"fromchainid": 2,
+	"userid": 10,
+	"noteid": "0xff1d03762104a83f212d690b6bac72902c93a97b588fad0886aac0084e130919",
+	"status": 2,
+	"fromtx": "0xe3ade7c90bcabccad0408c1ff72bf1fca0063badafc80b2a80c564dc2d3821eb",
+	"fromaddress": "0xf6478e9dc1ec91200faff28237f259c03369c784",
+	"blockno": 15606363,
+	"path0": "0x9a729ad93220c2880c0180c37f1bc2ca1d92255b59a57eddc8478078e0aeaef5",
+	"path1": "0xf5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b",
+	"root": "0x425d3e061472ff5686aa14bbdb03a2ac2a853f76da92d8b2aca83ebcb3edcbe0",
+	"leaf": "0xb7880eae844670876e96e1045094fa6cb9c726f7c2f1a8df56d143c88ec3ac4c",
+	"direction": [
+		true,
+		false
+	],
+	"notereq": "0xb7880eae844670876e96e1045094fa6cb9c726f7c2f1a8df56d143c88ec3ac4c"
+}

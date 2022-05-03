@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ZKP Cross Chain Note</title>
+</head>
+<body>
+    <!--h1 id="greeting">ZKP Cross Chain Note </h1>
+    <button id="btn-deposit" onclick="handler.handledeposit('0x727B715a3EaCb71A89C9321861a55eadc6f29A49', '30000000', '79',
+         '17559621506966228669946200908540191909304602050620774623186985148217036891086',
+         '3499692685359225014642568034871893823673913644950320594232804843053171036306','001001', '2','10')">Deposit</button>
+    <button id="btn-spend" onclick="handler.handlespend('0x0967f6f6cbb6202d09502669142e06c2b20d5057d4fc8730c980db1c6225b32a', 
+    '0x21bf564155e5265a69f0fc3352ba2dfc983ecee73b3c6e7452d0dbf005d55717', '30000000',
+    '0x22D1aB364210E18576621c4744CeF419cC2Df94A','79','9')">Spend</button-->
+    <script src="handler.bundle.js"></script>
+
+    <h1>ZKP Cross Chain Note request</h1>
+    <!--img src="loading.gif" style="margin-top:10px" id="anim-loading"-->
+    <br>
+    <!--input type="number" id="int1" name="int1" value="0" />
+    <input type="number" id="int2" name="int2" value="0" />
+    <input type="button" value="Scan" onclick="add();" />
+    <div id='result'></div-->
+    
+    <form action="/depositccnoteout" method="POST">
+        <p>FromAssetHash: <input type="text" id="fromassethash" name="fromassethash" /></p>
+        <p>Amount: <input type="text" id="amount" name="amount" /></p>
+        <p>Tochainid: <input type="text" id="tochainid" name="tochainid" /></p>
+        <p>Pk1: <input type="text" id="pk1" name="pk1" /></p>
+        <p>Pk2: <input type="text" id="pk2" name="pk2" /></p>
+        <p>EncryptedNote: <input type="text" id="encryptednote" name="encryptednote" /></p>
+        <p>Fromchainid: <input type="text" id="fromchainid" name="fromchainid" /></p>
+        <p>Userid: <input type="text" id="userid" name="userid" value="10" /></p>     
+
+        <input type="submit" value="Deposit HTTP Request" />
+    </form>
+    <button id="btn-deposit001" onclick="handler.handledeposit(document.getElementById('fromassethash').value, 
+    document.getElementById('amount').value, document.getElementById('tochainid').value,
+    document.getElementById('pk1').value,
+    document.getElementById('pk2').value, document.getElementById('encryptednote').value, document.getElementById('fromchainid').value,
+    document.getElementById('userid').value)">Deposit Func</button>
+
+    <form action="/spendccnote" method="POST">
+        <p>Noteid: <input type="text" id="noteid" name="noteid" /></p>
+        <p>Notereq: <input type="text" id="notereq" name="notereq" /></p>
+        <p>Amount: <input type="text" id="amountspend" name="amountspend" /></p>
+        <p>Recipient: <input type="text" id="recipient" name="recipient" /></p>
+        <p>Fromchainid: <input type="text" id="fromchainid" name="fromchainid" /></p>
+        <p>Userid: <input type="text" id="useridspend" name="useridspend" value="9" /></p>     
+        <p>Proof: <input type="text" id="proof" name="proof" maxlength="65535"/></p>
+
+        <input type="submit" value="Spend HTTP Request" />
+    </form>
+    <button id="btn-spend001" onclick="handler.handlespend(document.getElementById('noteid'), 
+    document.getElementById('notereq'), document.getElementById('amountspend'),
+    document.getElementById('recipient'),
+    document.getElementById('fromchainid'), document.getElementById('useridspend'), document.getElementById('proof'))">Spend Func</button>
+
+    <form action="/generateproof" method="POST">
+        <p>Noteid: <input type="text" id="noteidgen" name="noteidgen" /></p>
+        <p>Userid: <input type="text" id="useridgen" name="useridgen" value="9" /></p>     
+ 
+        <input type="submit" value="Generate Proof" />
+    </form>
+    <button id="btn-gen001" onclick="handler.generateproof(document.getElementById('noteidgen'), 
+    document.getElementById('useridgen'))">generateproof Func</button>
+
+    <script type="text/javascript">
+        window.setInterval(handler.transactionTimer, 10000);
+    </script>
+</body>
+</html>
